@@ -1,8 +1,8 @@
-# twitter-quick-search
+## twitter-quick-search
 Chrome Extentions for Twitter Search
 
-# Install
+## Install
 [Chrome Web Store]()
 
-# Reference
+## Reference
 [Twitter Search It](https://github.com/equinox79/Twitter-Search-It)
