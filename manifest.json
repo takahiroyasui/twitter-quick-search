@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Twitter Quick Search",
+  "version": "1.0.0",
+  "description": "コンテキストメニューからTwitter検索 / You can easily search twitter.",
+  "icons": {
+    "128" : "icon128.png"
+  },
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+  "content_security_policy" : "script-src 'self' 'unsafe-eval' https://platform.twitter.com; object-src 'self'",
+  "browser_action": {
+    "default_title": "Twitter Quick Search",
+    "default_icon": "icon128.png"
+  },
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*", "contextMenus"
+  ]
+}
