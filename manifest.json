@@ -14,7 +14,5 @@
     "default_title": "Twitter Quick Search",
     "default_icon": "icon128.png"
   },
-  "permissions": [
-    "tabs", "http://*/*", "https://*/*", "contextMenus"
-  ]
+  "permissions": ["contextMenus"]
 }
