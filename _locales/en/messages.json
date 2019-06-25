@@ -1,0 +1,6 @@
+{
+    "ext_name": { "message": "Twitter Quick Search" },
+    "ext_desc": { "message": "You can easily search twitter." },
+
+    "selection_menu_title": { "message": "Search selected words by Twitter" }
+}

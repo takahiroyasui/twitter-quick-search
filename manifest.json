@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Twitter Quick Search",
+  "name": "__MSG_ext_name__",
   "version": "1.1.0",
-  "description": "コンテキストメニューからTwitter検索 / You can easily search twitter.",
+  "description": "__MSG_ext_desc__",
   "icons": {
     "128" : "icon128.png"
   },
@@ -14,5 +14,6 @@
     "default_title": "Twitter Quick Search",
     "default_icon": "icon128.png"
   },
-  "permissions": ["contextMenus"]
+  "permissions": ["contextMenus"],
+  "default_locale": "en"
 }

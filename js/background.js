@@ -13,7 +13,7 @@ function createSearchResultTab(info, tab, query) {
  */
 var menus = {
     'selection' : chrome.contextMenus.create({
-        "title"     : '選択文字をツイッター検索',
+        "title"     : chrome.i18n.getMessage('selection_menu_title'),
         "contexts"  : ["selection"],
         "onclick"   : function(info, tab){
             createSearchResultTab(info, tab, encodeURIComponent(info.selectionText));
