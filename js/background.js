@@ -1,7 +1,7 @@
 
 function createSearchResultTab(info, tab, query) {
     if (!query) return;
-    var search_api_url = 'https://twitter.com/search/realtime?q=%s';
+    var search_api_url = 'https://twitter.com/search?f=live&q=%s';
     chrome.tabs.create({
         url      : search_api_url.replace(/%s/, query),
         selected : true
