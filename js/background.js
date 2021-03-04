@@ -11,12 +11,10 @@ function createSearchResultTab(info, tab, query) {
 /*
  *  右クリックメニュー作成
  */
-var menus = {
-    'selection' : chrome.contextMenus.create({
-        "title"     : chrome.i18n.getMessage('selection_menu_title'),
-        "contexts"  : ["selection"],
-        "onclick"   : function(info, tab){
-            createSearchResultTab(info, tab, encodeURIComponent(info.selectionText));
-        }
-    })
-};
+chrome.contextMenus.create({
+    "title"     :  chrome.i18n.getMessage('selection_menu_title') + '%s' + chrome.i18n.getMessage('suffix'),
+    "contexts"  : ["selection"],
+    "onclick"   : function(info, tab){
+        createSearchResultTab(info, tab, encodeURIComponent(info.selectionText));
+    }
+});

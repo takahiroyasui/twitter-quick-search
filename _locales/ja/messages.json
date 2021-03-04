@@ -2,5 +2,6 @@
     "ext_name": { "message": "Twitter Quick Search" },
     "ext_desc": { "message": "コンテキストメニューからTwitter検索" },
 
-    "selection_menu_title": { "message": "選択文字をツイッター検索" }
+    "selection_menu_title": { "message": "Twitterで「" },
+    "suffix": { "message": "」を検索"}
 }
