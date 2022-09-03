@@ -1,20 +1,21 @@
-
-function createSearchResultTab(info, tab, query) {
+function createSearchResultTab(query) {
     if (!query) return;
-    var search_api_url = 'https://twitter.com/search?f=live&q=%s';
+
+    var entry = `https://twitter.com/search?f=live&q=${query}`
     chrome.tabs.create({
-        url      : search_api_url.replace(/%s/, query),
-        selected : true
+        url: entry,
+        selected: true
     });
 }
 
-/*
- *  右クリックメニュー作成
- */
-chrome.contextMenus.create({
-    "title"     :  chrome.i18n.getMessage('selection_menu_title') + '%s' + chrome.i18n.getMessage('suffix'),
-    "contexts"  : ["selection"],
-    "onclick"   : function(info, tab){
-        createSearchResultTab(info, tab, encodeURIComponent(info.selectionText));
-    }
+chrome.runtime.onInstalled.addListener(() => {
+    chrome.contextMenus.create({
+        id: "search_tiwtter",
+        title: chrome.i18n.getMessage('selection_menu_title') + '%s' + chrome.i18n.getMessage('suffix'),
+        contexts: ["selection"],
+    });
 });
+
+chrome.contextMenus.onClicked.addListener(info => {
+    createSearchResultTab(encodeURIComponent(info.selectionText));
+})
